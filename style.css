@@ -1,31 +1,5 @@
 @import url("whitespace-reset.css");
 
-@media (max-width: 480px)   {
-  header nav {
-    display: block;
-    text-align: right;
-  }
-  h1 {
-    float: left;
-  }
-  header {
-    display: inline;
-  }
-  h2 {
-  font-size:26px;
-  }
-  body {
-    font-size: 16px;
-    padding: 0;
-  }
-  article {
-    padding: 0;
-  }
-}
-
-article {
-  padding: 0 125px 75px 125px;
-}
 body {
   padding-top: 75px;
   font: normal 20px "Avenir", Helvitica, arial, sans-serif;
@@ -34,20 +8,60 @@ body {
   text-decoration: none;
   background: #2f2840 url("images/bg_body.gif") 50% 0 repeat;
 }
-header h1 {
+a {
+  text-decoration: none;
+}
+
+.column {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+nav {
+  font-size: 24px;
+  text-transform: uppercase;
+  padding-bottom: 35px;
+}
+nav li {
+  display: inline;
+  padding: 0 42px;
+}
+
+nav a {
+  color: #cacaca;
+}
+
+main {
+  background: white;
+  padding: 75px 0 0 0;
+}
+
+h1 {
+  margin: 0 0 75px 0;
+}
+h1 a {
+  display: inline-block;
+  width: 298px;
+  height: 243px;
+  /* get rid of text for big screen */
+  text-indent: -9999px;
+  margin: 0 auto ;
+  background: transparent url("images/logo.png") 0 0 no-repeat;
+}
+article {
+  padding: 0 125px 75px 125px;
+}
+h1 {
   margin: 0 0 75px 0;
 }
 h1, h2, h3, footer, nav {
   text-align: center;
 }
-a {
-  text-decoration: none;
-}
+
 h2 {
   color: #45494d;
   font-size: 36px;
   margin-top: 0;
-  paddin-top: 0;
+  padding-top: 0;
 }
 h2:before,
 h2:after {
@@ -55,6 +69,7 @@ h2:after {
   padding: 0 24px;
   font-size: 22px;
   content: "\2022";
+  vertical-align: 5px;
 }
 h3 {
   color: #3e59b2;
@@ -64,40 +79,17 @@ ul {
   list-style: none;
   margin-bottom: 0;
 }
-header li {
-  display: inline;
-  padding: 0 44px;
-}
-header a {
-  color: #cacaca;
-  text-decoration: none;
-}
-header nav {
-  font-size: 24px;
-  text-transform: uppercase;
-  padding-bottom: 60px;
-}
-main {
-  background: white;
-}
-.column {
-  max-width: 1000px;
-  padding: 100px 0 0 0;
-  margin: 0 auto;
-}
+
 .selected {
   color: #6db9ff;
   font-weight: bold;
 }
-aside {
-}
+
 footer {
   color: #sb2b2b2;
   background-color: #e7e7e7;
   font-size: 20px;
-
   padding: 50px 0 84px 0 ;
-
   box-sizing: border-box;
 }
 footer p {
@@ -129,13 +121,11 @@ footer ul a.instagram {
   background-position: 0 100%;
 }
 
-
 article img {
   width: 90%;
   display:block;
   margin: 0 auto;
 }
-
 
 #projects article {
   padding: 0 0 50px 0;
@@ -171,3 +161,129 @@ article img {
   width: 100%;
   text-align: center;
 }
+
+@media (max-width: 875px) {
+    #team li {
+      width: 48%;
+      padding: 0 0 30px 0;
+    }
+    #team li img {
+      margin: 0 auto;
+    }
+}
+
+@media (max-width: 768px)   {
+  body {
+    padding-top: 45px;
+  }
+  header h1 a {
+    width: 223px;
+    height: 182px;
+    margin-bottom: 30px;
+    /* cover automatically adjusts to fit the dimensions */
+    background-size: cover;
+  }
+  nav {
+    padding-bottom: 20px;
+  }
+  .column {
+    padding-top: 30px;
+  }
+  article {
+    padding: 0 40px 50px 40px;
+  }
+
+  footer li {
+    display: inline-block;
+    padding: 0 32px;
+  }
+  footer {
+    padding: 35px 0;
+  }
+}
+
+@media (max-width: 480px)   {
+
+  body {
+    font-size: 16px;
+    padding: 0;
+  }
+  main {
+    padding: 35px 0 10px 0;
+  }
+  header h1 {
+    float: left;
+    font-size: 20px;
+  }
+  header h1 a {
+    margin-top: 25px;
+    width: auto;
+    height: 40px;
+    background-size: 90px auto;
+    padding: 10px 0 0 55px;
+    background-position: -18px 2px;
+    text-indent: 0;
+    color: #ffffff;
+    font-size: 20px;
+  }
+
+  h2 {
+  font-size:26px;
+  }
+ header nav {
+    padding: 10px 10px 10px 0;
+    text-align: right;
+    font-size: 16px;
+    padding: 5px 0;
+  }
+  header nav li {
+    display:block;
+    padding: 5px 0;
+  }
+
+  h2:before,
+  h2:after {
+    display: inline-block;   /* makes sure we can control them */
+    padding: 0 12px;
+    font-size: 16px;
+    content: "\2022";
+    vertical-align: 0;
+  }
+
+  footer p{
+    font-size: 16px;
+
+  }
+  footer nav {
+    font-size: 16px;
+    padding: 0 5px;
+  }
+  footer li {
+
+    padding: 0 15px;
+  }
+  #team {
+    font-size: 16px;
+    padding-bottom: 20px;
+  }
+}
+/*
+
+  header {
+    display: inline;
+    padding: 20px 15px;
+  }
+  header h1 a {
+    width: auto;
+    height: 40px;
+  }
+  article {
+    padding: 0;
+  }
+  header h1 a {
+    display: inline-block;
+    width: 298px;
+    height: 243px;
+    background: transparent url("images/logo.png") 0 0 no-repeat;
+}
+*/
