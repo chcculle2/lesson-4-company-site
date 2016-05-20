@@ -1,0 +1,46 @@
+
+
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <title>Liquid Layout</title>
+    <meta charset="UTF-8" />
+  </head>
+  <style>
+
+  main {
+    min-width: 600px;
+    max-width: 1400px;
+  }
+##content,
+#sidebar {
+  padding: 20px 30px;
+}
+
+#content {
+  float: left;
+  width: 50%;
+  box-sizing: border-box;
+  background: green;
+  height: 200px;
+}
+
+#sidebar {
+  overflow: hidden;
+  background: red;
+  height: 500px;
+}
+  </style>
+
+  <body>
+    <main>
+      <div id="content">
+        <!-- placeholder content -->
+      </div>
+
+      <div id="sidebar">
+        <!-- placeholder content -->
+      </div>
+    </main>
+  </body>
+</html>
